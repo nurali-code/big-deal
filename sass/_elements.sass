@@ -1,0 +1,144 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$black: #333
+$second: #85CDFD
+$prime: #26AAE2
+$prime_dark: #274E37
+
+// @font-face
+//     font-family: 'Jost'
+//     src: url('../fonts/Jost-400-Book.ttf') format('truetype'), url('../fonts/Jost-400-Book.otf') format('opentype')
+//     font-weight: 400
+//     font-style: normal
+//     font-display: swap
+
+// @font-face
+//     font-family: 'Jost'
+//     src: url('../fonts/Jost-500-Medium.ttf') format('truetype'), url('../fonts/Jost-500-Medium.otf') format('opentype')
+//     font-weight: 500
+//     font-style: normal
+//     font-display: swap
+
+// @font-face
+//     font-family: 'Jost'
+//     src: url('../fonts/Jost-700-Bold.ttf') format('truetype'), url('../fonts/Jost-700-Bold.otf') format('opentype')
+//     font-weight: 700
+//     font-style: normal
+//     font-display: swap
+
+body
+    min-height: 100vh
+    color: $black
+    font-size: 14px
+    background-color: #fff
+    font-family: 'Jost', sans-serif
+    scroll-behavior: smooth
+    position: relative
+    z-index: 1
+
+    &.active
+        overflow: hidden
+
+h1
+    font-size: 42px
+    font-weight: 500
+    line-height: 110%
+    margin: 0 0 24px
+
+h2
+    font-size: 40px
+    font-weight: 400
+
+ol, ul
+    padding: 0 0 12px 20px
+    li
+        font-size: 16px
+        font-weight: 400
+        padding: 8px 0
+
+ul
+    li
+        list-style: none
+        background-image: url('../img/ic-ul.svg')
+        background-repeat: no-repeat
+        background-position: top 10px left
+        background-size: auto 13px
+        padding: 6px 0 6px 30px
+        font-size: 18px
+
+.container
+    width: 100%
+    max-width: 1600px
+    margin: 0 auto
+    z-index: 1
+    position: relative
+
+p
+    font-size: 18px
+    line-height: 130%
+
+a,
+button
+    color: $black
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+section
+    padding: 100px 0
+    position: relative
+
+.btn
+    text-decoration: none
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    color: white
+    padding: 16px 28px
+    border-radius: 20px
+    background-color: $prime
+    font-size: 16px
+    padding: 20px 28px
+
+    &-outline
+        padding: 16px 28px
+        border-radius: 20px
+        border: 1px solid $prime
+        background: #FFF
+        color: $prime
+
+    &:hover
+        opacity: 1
+        box-shadow: 0px 15px 44px -10px rgba($prime, 0.6)
+
+    &:active
+        opacity: 1
+        transform: scale(.95)
+
+    &[disabled]
+        color: rgba(0, 0, 0, .2)
+        background-color: rgba($prime, .3)
+        cursor: unset
+        animation: none
+        pointer-events: none
+        box-shadow: none
+
+.wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+
+mark
+    background: transparent
+    color: $prime

@@ -1,0 +1,69 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+
+.main
+    overflow: hidden
+    margin: 0 auto 
+    height: 85vh
+    max-height: 1000px
+    position: relative
+    z-index: 1
+    &-content
+        max-width: 520px
+        margin: 0 auto 0 0
+        width: 50%
+
+    &-img
+        margin: 0 auto 
+        width: 50%
+
+    &-img
+        width: 668px
+        pointer-events: none
+        img
+            width: 100%
+            object-fit: contain
+            display: block
+
+    .container
+        &.wrap
+
+    p
+        font-size: 20px
+        margin-bottom: 39px
+
+    &-list
+        width: 100%
+        align-items: flex-start
+        li
+            min-width: 18%
+            max-width: 20%
+
+    &-sceen
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+        height: 100%
+        max-width: 1920px
+        z-index: -1
+        img
+            position: absolute
+            &:nth-child(1)
+                top: 10%
+                right: 10%
+            &:nth-child(2)
+                bottom: 20%
+                right: -4%
+            &:nth-child(3)
+                bottom: 20%
+                left: 45%
+            &:nth-child(4)
+                width: 914px
+                left: 50%
+                margin-left: -457px
+                z-index: -1
+                
+            

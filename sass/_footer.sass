@@ -1,0 +1,60 @@
+.footer
+    background-color: #1A1918
+    color: white
+    padding: 24px 0
+
+    .btn
+        width: 100%
+
+    .col
+        width: 100%
+
+    .logo
+        display: block
+        margin-bottom: 12px
+
+    &__text
+        font-size: 12px
+
+    &__heading
+        font-size: 14px
+        margin: 16px 0 12px
+
+    form
+        display: none
+
+    nav
+        max-width: 200px
+        a
+            font-size: 12px
+            display: block
+            text-decoration: none
+            padding: 4px 0
+
+    @media screen and ( min-width: 700px )
+        .wrap
+            align-items: flex-start
+
+        .col
+            width: unset
+            max-width: 32%
+
+        nav
+            min-width: 150px
+            a 
+                font-size: 16px
+
+    @media screen and ( min-width: 1000px )
+        padding: 100px 0
+        form 
+            display: block
+            input 
+                margin-bottom: 16px
+            p 
+                margin-bottom: 16px
+        &__heading
+            font-size: 20px
+            margin-top: 0
+        &__text
+            margin-bottom: 48px
+            font-size: 16px
