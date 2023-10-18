@@ -56,11 +56,11 @@
             <li>Настройка рекламы именно <b> <br> под вашу целевую аудиторию</b></li>
             <li><b>Понятные отчеты</b> <br> 1/2/4 раза в месяц</li>
         </ul>
-        <div class="main-sceen">
-            <img src="img/shape-1.svg" alt="shape">
-            <img src="img/shape-2.svg" alt="shape">
-            <img src="img/shape-3.svg" alt="shape">
-            <img src="img/shape-4.svg" alt="shape">
+        <div class="main-sceen" id="scene">
+            <img data-depth=".3" src="img/shape-1.svg" alt="shape">
+            <img data-depth=".2" src="img/shape-2.svg" alt="shape">
+            <img data-depth=".2" src="img/shape-3.svg" alt="shape">
+            <img data-depth=".05" src="img/shape-4.svg" alt="shape">
         </div>
     </main>
 
@@ -71,8 +71,51 @@
                 <span>Что мы предлагаем</span>
             </h2>
         </div>
+        <div class="reclam-controls">
+            <div class="reclam__counter"></div>
+        </div>
         <div class="reclam-slider">
-            <div class="reclam-item wrap container">
+            <div class="reclam-item">
+                <div class="reclam-img">
+                    <img src="./img/MacBook.png" alt="MacBook">
+                </div>
+                <div class="reclam-content">
+                    <h3 class="reclam__heading">
+                        Текстовые объявления
+                    </h3>
+                    <p class="reclam__text">
+                        Расположена под поисковой строкой Яндекса или его партнеров, занимает первые позиции в
+                        списке сайтов. Независимо от запроса перед внутренней выдачей результата поиска пользователь
+                        видит информацию рекламодателя, отвечающей тематике поиска
+                    </p>
+                    <h4 class="reclam__subheading">Подойдет для:</h4>
+                    <ul>
+                        <li>Продуктов со сформированным спросом</li>
+                        <li>Товаров и услуг, которые нужны срочно</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="reclam-item">
+                <div class="reclam-img">
+                    <img src="./img/MacBook.png" alt="MacBook">
+                </div>
+                <div class="reclam-content">
+                    <h3 class="reclam__heading">
+                        Текстовые объявления
+                    </h3>
+                    <p class="reclam__text">
+                        Расположена под поисковой строкой Яндекса или его партнеров, занимает первые позиции в
+                        списке сайтов. Независимо от запроса перед внутренней выдачей результата поиска пользователь
+                        видит информацию рекламодателя, отвечающей тематике поиска
+                    </p>
+                    <h4 class="reclam__subheading">Подойдет для:</h4>
+                    <ul>
+                        <li>Продуктов со сформированным спросом</li>
+                        <li>Товаров и услуг, которые нужны срочно</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="reclam-item">
                 <div class="reclam-img">
                     <img src="./img/MacBook.png" alt="MacBook">
                 </div>
@@ -271,11 +314,45 @@
                 <div class="clients-item">
                     <img src="img/Getman.svg" alt="Fidesco">
                 </div>
+                <div class="clients-item">
+                    <img src="img/Fidesco.svg" alt="Fidesco">
+                </div>
+                <div class="clients-item">
+                    <img src="img/Getman.svg" alt="Fidesco">
+                </div>
+                <div class="clients-item">
+                    <img src="img/Fidesco.svg" alt="Fidesco">
+                </div>
+                <div class="clients-item">
+                    <img src="img/Getman.svg" alt="Fidesco">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- <script src="./js/script.js" defer></script> -->
+
+
+    <footer class="footer">
+        <div class="container wrap">
+            <img src="img/logo.svg" alt="logo">
+            <nav class="nav">
+                <a href="#" class="nav__link" target="_blank">Веб-разработка</a>
+                <a href="#" class="nav__link" target="_blank">Техподдержка</a>
+                <a href="#" class="nav__link" target="_blank">Продвижение сайта</a>
+                <a href="#" class="nav__link" target="_blank">Битрикс 24</a>
+                <a href="#" class="nav__link" target="_blank">Landing Page</a>
+            </nav>
+            <div class="actions">
+                <a href="tel:+78129874729" class="nav__link">+7 (812) 987-47-29</a>
+                <button class="btn-outline">Оставить заявку</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery-3.7.1.min.js" defer></script>
+    <script src="./js/parallax.min.js" defer></script>
+    <script src="./js/slick.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
 
 </body>
 

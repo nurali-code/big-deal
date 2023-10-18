@@ -48,7 +48,7 @@ h1
     font-size: 48px
     font-weight: 500
     line-height: normal
-    margin: 0 0 32px
+    margin: 0 0 30px
 
 h2
     font-size: 40px
@@ -94,6 +94,9 @@ ul
 p
     font-size: 18px
     line-height: 130%
+
+img
+    max-width: 100%
 
 a,
 button
@@ -157,11 +160,8 @@ mark
     color: $prime
 
 .dropdown
-    border-top: 1px solid #E0E0E0
     position: relative
     z-index: 1
-    &.active
-        border-color: $prime
 
     &-ol
         list-style-type: none
@@ -199,6 +199,7 @@ mark
                 padding: 0 0 85px
 
     &-btn
+        border-top: 1px solid #E0E0E0
         text-align: left
         font-size: 24px
         font-weight: 500
@@ -220,6 +221,7 @@ mark
         &:active
             transform: scale(.99)
         &.active
+            border-color: $prime
             &::after
                 transform: rotate(45deg)
 
@@ -227,6 +229,7 @@ mark
         display: none
         padding: 8px 140px 48px
 
-@media screen and ( max-width: 1630px )
+@media screen and ( max-width: 1600px )
     .container
-        max-width: 1100px
+        max-width: 1200px
+        padding: 0 15px

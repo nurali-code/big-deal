@@ -1,13 +1,30 @@
 .header
-    padding: 27px 0 0
-    .nav
-        margin: 0 50px 0 auto 
-        &__item
-            font-size: 16px
-            font-style: normal
-            font-weight: 500
-            padding: 10px 16px
+    padding: 27px 0 10px
 
     .btn
         &-outline
             margin-left: 10px
+.nav
+    margin: 0 50px 0 auto
+    &__item
+        font-size: 16px
+        font-style: normal
+        font-weight: 500
+        padding: 10px 16px
+
+@media screen and ( max-width: 1600px )
+    .header
+        padding: 20px 0 10px
+
+        .logo
+            max-width: 170px
+
+        .btn
+            &-outline
+                padding: 14px 25px
+                margin-left: 10px
+    .nav
+        margin: 0 auto
+        &__item
+            font-size: 14px
+            padding: 10px
