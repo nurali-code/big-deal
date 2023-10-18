@@ -12,9 +12,7 @@
     position: relative
     z-index: 1
     &-content
-        width: 520px
-        max-width: 50%
-        margin: 0
+        margin: auto
 
     &-img
         margin: 0 auto
@@ -25,12 +23,15 @@
             width: 100%
             object-fit: contain
             display: block
-            transform: translateX(90px)
+            // transform: translateX(90px)
             max-height: 73vh
+
+    h1
+        max-width: 520px
 
     p
         font-size: 20px
-        max-width: 90%
+        max-width: 500px
         margin-bottom: 39px
 
     &-list
@@ -42,7 +43,7 @@
             min-width: 24%
             max-width: 25%
 
-    &-sceen
+    &-scene
         position: absolute
         top: 0
         left: calc((100% - 1600px)/2)
@@ -50,33 +51,42 @@
         height: 100%
         max-width: 1920px
         z-index: -1
-        img
+        // background-color: red
+        &__item
+            display: inline-block
             position: absolute !important
             &:nth-child(1)
                 top: 8% !important
                 left: auto !important
                 right: 13% !important
+
             &:nth-child(2)
                 top: auto !important
                 bottom: 20% !important
                 left: auto !important
                 right: 4% !important
-                animation: circleAnim 20s linear infinite
+                img
+                    animation: circleAnim 20s linear infinite
+
             &:nth-child(3)
                 bottom: 20% !important
                 top: auto !important
-                left: 45% !important
-                animation: circleAnim 10s linear infinite reverse
+                left: 42% !important
+                img
+                    animation: circleAnim 10s linear infinite reverse
 
             &:nth-child(4)
                 width: 900px
                 top: 5px !important
                 left: 50% !important
-                margin-left: -457px
+                margin-left: -600px
                 z-index: -1
 
-        span
-            img
+            &:nth-child(5)
+                // right: 0 !important
+                left: 42% !important
+                img
+                    display: block
 
 .reclam
     &-slider
@@ -228,6 +238,8 @@
         background-image: url('../img/price-bg.svg')
         background-repeat: no-repeat
         background-position: bottom left
+        .col
+            // max-width: 32%
 
     &__heading
         font-size: 24px
@@ -254,11 +266,11 @@
             img
                 transform: none
 
-        &-sceen
+        &-scene
             max-width: 1200px
             left: calc((100% - 1200px)/2)
 
-            img
+            &__item
                 &:nth-child(1)
                     right: 5% !important
                 &:nth-child(2)
@@ -284,6 +296,10 @@
 
         &-item
             width: 1200px
+
+    .clients
+        &-item
+            height: 160px
 
 @keyframes lineAnim
     0%
