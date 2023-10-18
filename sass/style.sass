@@ -10,12 +10,14 @@
     position: relative
     z-index: 1
     &-content
-        max-width: 520px
+        width: 520px
+        max-width: 50%
         margin: 0
 
     &-img
         margin: 0 auto
         width: 668px
+        max-width: 50%
         pointer-events: none
         img
             width: 100%
@@ -83,14 +85,17 @@
             border-radius: 0px 300px 300px 0px
 
     &-img
-        width: 50%
+        width: 45%
         img
+            max-width: 100%
             display: block
+            margin: 0 auto 
 
     &__heading
         font-size: 28px
         font-weight: 500
         margin: 0 0 24px
+    
     &__text
         font-size: 16px
         font-style: normal
@@ -123,6 +128,7 @@
 
     &-content
         width: 520px
+        max-width: 50%
         margin: 0 auto
         ul
             li

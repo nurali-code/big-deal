@@ -164,10 +164,10 @@ mark
         border-color: $prime
 
     &-ol
+        list-style-type: none
+        counter-reset: custom-counter
         .dropdown
             padding: 0
-            list-style-type: none
-            counter-reset: custom-counter
             &::before
                 content: "0" counter(custom-counter) "."
                 counter-increment: custom-counter
@@ -226,3 +226,7 @@ mark
     &-content
         display: none
         padding: 8px 140px 48px
+
+@media screen and ( max-width: 1630px )
+    .container
+        max-width: 1100px
