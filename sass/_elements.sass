@@ -164,6 +164,7 @@ mark
 
     &-ol
         list-style-type: none
+        padding: 0
         counter-reset: custom-counter
         .dropdown
             padding: 0
@@ -179,10 +180,7 @@ mark
                 z-index: 100
 
             &-btn
-                padding: 34px 40px 34px 136px
-                &::after
-                    top: 26px
-
+                padding-left: 136px
     &-ul
         padding: 0
         .dropdown
@@ -193,9 +191,6 @@ mark
 
             &-content
                 font-size: 16px
-                margin: 0 214px 0 auto
-                max-width: 713px
-                padding: 0 0 85px
 
     &-btn
         border-top: 1px solid #E0E0E0
@@ -207,6 +202,7 @@ mark
         position: relative
         &::after
             content: '+'
+            transition: all ease .3s
             text-align: center
             position: absolute
             top: 28px
@@ -226,7 +222,18 @@ mark
 
     &-content
         display: none
-        padding: 8px 140px 48px
+        padding: 8px 40px 48px
+        p
+            max-width: 48%
+            margin: 0 auto
+
+        ul
+            padding-left: 100px
+
+        .wrap
+            width: 100%
+            p
+                margin: 0
 
 @media screen and ( max-width: 1600px )
     .container
@@ -238,23 +245,88 @@ mark
     ul, ol
         li
             font-size: 15px
+
     ul
         li
             padding: 4px 0 4px 30px
             background-position: top 7px left
 
+    .dropdown
+        &-btn
+            font-size: 20px
+            padding: 23px 40px 23px 0
+            &::after
+                width: 32px
+                height: 32px
+                font-size: 28px
+                top: 15px
+
+        &-ol
+            .dropdown
+                &::before
+                    top: 23px
+
 @media screen and ( max-width: 1200px )
     h1, h2
         font-size: 38px
 
+    section
+        padding: 50px 0
+
 @media screen and ( max-width: 920px )
     h2
+        margin-bottom: 28px
         span
             position: static
             display: block
             padding: 8px 0 0
             font-size: 16px
 
+    .dropdown
+        &-btn
+
+        &-ol
+            .dropdown
+                &::before
+                    top: 24px
+                    font-size: 20px
+
+                &-btn
+                    padding-left: 50px
+
+                &-content
+                    ul
+                        padding: 0
+
+        &-content
+            padding: 0 0 33px
+            p
+                font-size: 16px
+                max-width: 100%
+
+            ul
+                padding-left: 30px
+
+            .wrap
+                display: block
+                p
+                    margin-bottom: 10px
+                    &:last-child
+                        margin-bottom: 0
+
 @media screen and ( max-width: 700px )
     h1, h2
         font-size: 28px
+
+    .dropdown
+        &-btn
+            padding: 20px 0
+            font-size: 16px
+
+        &-ol
+            .dropdown
+                &-btn 
+                    padding-left: 35px
+                &::before
+                    top: 21px
+                    font-size: 16px

@@ -1,7 +1,13 @@
 var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene, {
-    // relativeInput: true
+    relativeInput: true
 });
+
+$('a[href*="#"]').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top, }, 300,)
+});
+
 
 $(".reclam-slider").on("init reInit afterChange", function (event, slick) {
     var sCurr = slick.slickCurrentSlide() <= 8 ? '0' + (slick.slickCurrentSlide() + 1) : slick.slickCurrentSlide() + 1;
@@ -26,9 +32,6 @@ $('.clients-slider').slick({
     slidesToShow: 4,
     adaptiveHeight: true
 });
-
-
-
 
 $('.dropdown-btn').on('click', function (e) {
     if ($(this).hasClass('active')) { $('.dropdown-btn').removeClass('active').next().slideUp(); }
