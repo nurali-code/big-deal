@@ -16,15 +16,14 @@ $('.reclam-slider').slick({
     appendArrows: $(".reclam-controls"),
     centerMode: true,
     variableWidth: true,
-    adaptiveHeight: true
+    adaptiveHeight: true,
 });
+
 $('.clients-slider').slick({
     dots: false,
     infinite: true,
     speed: 300,
     slidesToShow: 4,
-    // centerMode: true,
-    // variableWidth: true,
     adaptiveHeight: true
 });
 

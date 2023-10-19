@@ -89,6 +89,7 @@
 
     &-arrow
         width: 40px
+        font-size: 0
         height: 40px
         background-color: $black
         color: transparent
@@ -149,17 +150,7 @@
             button
                 background-color: rgba(0, 0, 0, 0)
 
-    @media screen and ( max-width: 1300px )
+    @media screen and ( max-width: 1200px )
         &-arrow 
             width: 40px
             height: 40px
-        
-        &-prev 
-            left: 16px
-        
-        &-next 
-            right: 16px
-
-    @media screen and ( max-width: 700px )
-        &-prev 
-            display: none

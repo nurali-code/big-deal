@@ -68,7 +68,7 @@ h2
         text-align: center
 
 ol, ul
-    padding: 0 0 12px 20px
+    padding: 0 0 0 20px
     li
         font-size: 16px
         font-weight: 400
@@ -86,10 +86,9 @@ ul
 
 .container
     width: 100%
-    max-width: 1600px
+    padding: 0 20px
+    max-width: 1640px
     margin: 0 auto
-    z-index: 1
-    position: relative
 
 p
     font-size: 18px
@@ -231,8 +230,10 @@ mark
 
 @media screen and ( max-width: 1600px )
     .container
-        max-width: 1200px
-        padding: 0 15px
+        max-width: 1240px
+
+    h1
+        font-size: 40px
 
     ul, ol
         li
@@ -241,3 +242,19 @@ mark
         li
             padding: 4px 0 4px 30px
             background-position: top 7px left
+
+@media screen and ( max-width: 1200px )
+    h1, h2
+        font-size: 38px
+
+@media screen and ( max-width: 920px )
+    h2
+        span
+            position: static
+            display: block
+            padding: 8px 0 0
+            font-size: 16px
+
+@media screen and ( max-width: 700px )
+    h1, h2
+        font-size: 28px
