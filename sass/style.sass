@@ -367,7 +367,7 @@
     min-height: 438px
     background-image: url('../img/rec-bg.svg')
     background-repeat: no-repeat
-    background-position: center center
+    background-position: center right
     background-size: cover
     &-content
         max-width: 1600px
@@ -385,7 +385,8 @@
             &:first-child
                 left: 23% !important
                 display: inline-block
-                height: 100%
+                width: 500px
+                max-width: 69%
                 object-fit: contain
             &:nth-child(2)
                 left: auto !important
@@ -456,6 +457,13 @@
         &-btn
             font-size: 18px
 
+    .request
+        padding: 60px 80px
+        min-height: 380px
+        &-img 
+            // right: 10%
+
+
 @media screen and ( max-width: 1400px )
     .clients
         &-slider
@@ -489,9 +497,6 @@
                 &:nth-child(5)
                     left: 48% !important
 
-    section
-        display: none
-
     .reclam
         &-slider
             padding-bottom: 50px
@@ -508,9 +513,6 @@
                     max-width: 25%
                 &:last-child
                     max-width: unset
-
-    #reclam, #stages, #faq, #reviews, #price
-        display: block
 
     .reviews
         &-controls
