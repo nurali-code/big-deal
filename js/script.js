@@ -31,6 +31,7 @@ $(".reviews-slider").on("init reInit afterChange", function (event, slick) {
     var sCount = slick.slideCount <= 8 ? '0' + slick.slideCount : slick.slideCount;
     $(".reviews__counter").html('<span>' + sCurr + '</span>' + "/" + sCount);
 });
+
 $('.reviews-slider').slick({
     dots: false,
     infinite: true,
@@ -41,6 +42,7 @@ $('.reviews-slider').slick({
     variableWidth: true,
     adaptiveHeight: true,
 });
+
 
 // clients *****************
 
