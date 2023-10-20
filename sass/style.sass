@@ -358,6 +358,7 @@
             // object-fit: contain
 
 .request
+    width: 97%
     border-radius: 20px
     background-color: $prime
     color: white
@@ -369,14 +370,12 @@
     background-repeat: no-repeat
     background-position: center right
     background-size: cover
-    &-content
-        max-width: 1600px
+    &__heading
         max-width: 470px
-    
+
     &-img
         position: absolute
-        width: 50%
-        max-height: 120%
+        width: 48%
         right: 0
         top: -10%
         text-align: center
@@ -458,11 +457,10 @@
             font-size: 18px
 
     .request
-        padding: 60px 80px
-        min-height: 380px
-        &-img 
+        padding: 60px 80px 80px
+        min-height: unset
+        &-img
             // right: 10%
-
 
 @media screen and ( max-width: 1400px )
     .clients
@@ -662,6 +660,7 @@
         &__headng
             font-size: 20px
             margin-bottom: 8px
+        
         &__price
             font-size: 20px
             margin-bottom: 16px
@@ -669,9 +668,12 @@
         &-btn
             border-radius: 10px
             padding: 16px
+        
         &-content
-            display: block
             background-size: 240px auto
+            &.active
+                display: block
+
             .col
                 max-width: 100% !important
                 &:first-child
@@ -683,6 +685,31 @@
 
                 .btn
                     width: 100%
+
+    .request
+        max-width: 540px
+        padding: 70px 50px 440px
+        background-image: url('../img/rec-bg-mob.svg')
+        background-repeat: no-repeat
+        background-position: bottom -120px right
+        background-size: 400px auto
+
+        &__heading
+            margin-bottom: 40px
+            i
+                font-style: normal
+        .btn-black
+            // width: 100%
+        &-img
+            position: absolute
+            max-width: 100%
+            left: 8%
+            width: 100%
+            top: 38%
+            img
+                &:first-child
+                    max-width: 80%
+                    left: 8% !important
 
 @media screen and ( max-width: 700px )
     .main
@@ -728,6 +755,40 @@
             ul
                 li
                     font-size: 14px
+
+    .request
+        padding: 60px 20px 412px
+        max-width: calc( 100% - 40px )
+        background-size: 300px auto
+        background-position: bottom -20px right
+        &__heading
+            font-size: 32px
+            i
+                white-space: nowrap
+
+        .btn-black
+            width: 100%
+        &-img
+            max-width: 318px
+            margin-left: -159px
+            left: 50% !important
+            top: auto !important
+            bottom: -9% !important
+            img
+                &:first-child
+                    left: 0 !important
+                    max-width: 100%
+
+                &:nth-child(2)
+                    top: 7% !important
+                    right: 4% !important
+                    max-width: 95%
+                &:nth-child(3)
+                    top: 10% !important
+                    left: 25% !important
+                &:nth-child(4)
+                    top: -15% !important
+                    left: 9% !important
 
 @keyframes lineAnim
     0%
