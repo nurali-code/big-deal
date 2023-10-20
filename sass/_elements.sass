@@ -132,6 +132,12 @@ section
         background: #FFF
         color: $prime
 
+    &-black 
+        padding: 16px 38px
+        border-radius: 20px
+        color: white
+        background-color: $black
+
     &:hover
         opacity: 1
         box-shadow: 0px 15px 44px -10px rgba($prime, 0.6)
@@ -259,7 +265,7 @@ mark
                 width: 32px
                 height: 32px
                 font-size: 28px
-                top: 15px
+                top: 20px
 
         &-ol
             .dropdown
@@ -281,6 +287,9 @@ mark
             display: block
             padding: 8px 0 0
             font-size: 16px
+
+        &.center 
+            text-align: left
 
     .dropdown
         &-btn
@@ -320,8 +329,10 @@ mark
 
     .dropdown
         &-btn
-            padding: 20px 0
+            padding: 20px 45px 20px 0
             font-size: 16px
+            &::after
+                top: 15px
 
         &-ol
             .dropdown

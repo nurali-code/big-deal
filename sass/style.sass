@@ -222,7 +222,10 @@
             margin: 0 auto
 
         &-item
-            height: 160px
+            width: 280px
+            height: 150px
+            margin: 0 9px
+            border-radius: 10px
 
 .tab
     &-btn
@@ -230,7 +233,7 @@
         display: inline-block
         padding: 24px
         margin-bottom: 12px
-        width: 33%
+        width: 32%
         font-size: 20px
         font-weight: 500
         border: 1px solid $prime
@@ -240,6 +243,7 @@
             color: white
 
     &-content
+        display: none
         padding: 64px 77px 64px 58px
         align-items: flex-start
         border-radius: 20px
@@ -247,8 +251,15 @@
         background-image: url('../img/price-bg.svg')
         background-repeat: no-repeat
         background-position: bottom left
+        ul
+            padding: 0
+
         .col
             // max-width: 32%
+
+        &.active
+            display: flex
+            animation: activeTab .4s ease forwards
 
     &__heading
         font-size: 24px
@@ -317,15 +328,15 @@
         position: relative
         z-index: 1
         width: 1248px
-        max-width: 100%
-        // min-height: 615px
+        max-width: 97vw
         display: flex !important
         justify-content: space-between
         padding-top: 30px
         margin: 0 40px
 
     &-content
-        max-width: 420px
+        width: 420px
+        max-width: 48%
         padding: 73px 0 245px
 
     &__heading
@@ -336,15 +347,57 @@
     &__text
         font-size: 20px
         font-weight: 400
+
     &-img
         width: 432px
-        // position: absolute
-        // right: 0
-        // top: 0
+        max-width: 48%
+
         img
             // width: 100%
             // height: 100%
             // object-fit: contain
+
+.request
+    border-radius: 20px
+    background-color: $prime
+    color: white
+    padding: 97px 165px
+    position: relative
+    margin-bottom: 90px
+    min-height: 438px
+    background-image: url('../img/rec-bg.svg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    &-content
+        max-width: 1600px
+        max-width: 470px
+    
+    &-img
+        position: absolute
+        width: 50%
+        max-height: 120%
+        right: 0
+        top: -10%
+        text-align: center
+        img
+            position: absolute
+            &:first-child
+                left: 23% !important
+                display: inline-block
+                height: 100%
+                object-fit: contain
+            &:nth-child(2)
+                left: auto !important
+                top: 20% !important
+                right: 15% !important
+            &:nth-child(3)
+                width: 20px
+                top: 30% !important
+                left: 2% !important
+            &:nth-child(4)
+                top: 48% !important
+                left: 12% !important
 
 @media screen and ( max-width: 1600px )
     .main
@@ -392,6 +445,25 @@
             width: 1200px
 
     .clients
+        &-slider
+            .slick
+                &-next
+                    right: -50px
+                &-prev
+                    left: -50px
+
+    .tab
+        &-btn
+            font-size: 18px
+
+@media screen and ( max-width: 1400px )
+    .clients
+        &-slider
+            .slick
+                &-next
+                    right: 30px
+                &-prev
+                    left: 30px
 
 @media screen and ( max-width: 1200px )
     .main
@@ -428,8 +500,21 @@
         &-controls
             bottom: 80px
 
-    #reclam, #stages, #faq
+    .tab
+        &-content
+            .col
+                max-width: 53%
+                &:first-child
+                    max-width: 25%
+                &:last-child
+                    max-width: unset
+
+    #reclam, #stages, #faq, #reviews, #price
         display: block
+
+    .reviews
+        &-controls
+            left: 20px
 
 @media screen and ( max-width: 920px )
     .main
@@ -525,6 +610,78 @@
             padding: 0
             display: block !important
 
+    .reviews
+        &-slider
+            background-color: #F2F2F2
+            &::before,
+            &::after
+                display: none
+
+        &-content
+            width: 100%
+            max-width: 100%
+            padding: 0
+
+        &__heading
+            margin-bottom: 12px
+
+        &-item
+            display: block !important
+            max-width: 100vw
+            padding: 40px 20px 128px
+
+        &-img
+            width: unset
+            max-width: 150px
+            padding: 20px 0 0
+            &::before
+                content: 'Полный отзыв'
+                color: $prime
+                font-size: 16px
+                font-weight: 500
+                letter-spacing: 0.32px
+                text-decoration-line: underline
+            img
+                display: none
+
+        &-controls
+            left: 20px
+            bottom: 98px
+
+    .clients
+        &-slider
+            width: 100vw
+            left: -20px
+            .slick
+                &-list
+                    padding: 0 18px
+
+    .tab
+        &__headng
+            font-size: 20px
+            margin-bottom: 8px
+        &__price
+            font-size: 20px
+            margin-bottom: 16px
+
+        &-btn
+            border-radius: 10px
+            padding: 16px
+        &-content
+            display: block
+            background-size: 240px auto
+            .col
+                max-width: 100% !important
+                &:first-child
+                    margin-bottom: 24px
+                &:nth-child(2)
+                    margin-bottom: 32px
+                &:last-child
+                    text-align: center
+
+                .btn
+                    width: 100%
+
 @media screen and ( max-width: 700px )
     .main
         h1
@@ -543,6 +700,33 @@
             font-size: 16px
             margin-bottom: 32px
 
+    .reviews
+        &__heading
+            font-size: 20px
+        &__text
+            font-size: 16px
+
+        &-controls
+            width: 89%
+
+    .clients
+        &-slider
+
+    .tab
+        &-btn
+            font-size: 12px
+            width: 32.4%
+            padding: 10px
+            border-radius: 4px
+            margin-bottom: 8px
+
+        &-content
+            padding: 31px 18px 56px
+            border-radius: 4px
+            ul
+                li
+                    font-size: 14px
+
 @keyframes lineAnim
     0%
         background-position: center 0
@@ -554,3 +738,11 @@
         transform: rotate(360deg)
     100%
         transform: rotate(0)
+
+@keyframes activeTab
+    0%
+        transform: translateY(30px)
+        opacity: .2
+    100%
+        opacity: 1
+        transform: translateY(0)

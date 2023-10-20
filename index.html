@@ -218,11 +218,11 @@
                 <span>Цены на услуги настройки и ведения</span>
             </h2>
             <div class="wrap">
-                <button class="tab-btn active">Лайт</button>
-                <button class="tab-btn">Средний</button>
-                <button class="tab-btn">Максимальный</button>
+                <button class="tab-btn active" data-tab-btn="1">Лайт</button>
+                <button class="tab-btn" data-tab-btn="2">Средний</button>
+                <button class="tab-btn" data-tab-btn="3">Максимальный</button>
             </div>
-            <div class="tab-content wrap">
+            <div class="tab-content wrap active" data-tab-content="1">
                 <div class="col">
                     <h3 class="tab__heading">Тариф «Лайт»</h3>
                     <p class="tab__text">подойдет для небольших рекламных кампаний</p>
@@ -241,6 +241,47 @@
                 </div>
                 <div class="col">
                     <p class="tab__price">от 20 000 ₽</p>
+                    <button class="btn">Заказать</button>
+                </div>
+            </div>
+            <div class="tab-content wrap" data-tab-content="2">
+                <div class="col">
+                    <h3 class="tab__heading">Тариф «Средний»</h3>
+                    <p class="tab__text">подойдет для небольших рекламных кампаний</p>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>Настройка рекламной компании в Яндекс Директ</li>
+                        <li>Настройка для одного города или области</li>
+                        <li>До 400 ключевых запросов</li>
+                        <li>Ведение рекламной компании рассчитывается индивидуально</li>
+                        <li>Рекомендуемый бюджет от 30 000 ₽.</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="tab__price">от 40 000 ₽</p>
+                    <button class="btn">Заказать</button>
+                </div>
+            </div>
+            <div class="tab-content wrap" data-tab-content="3">
+                <div class="col">
+                    <h3 class="tab__heading">Тариф «Максимальный»</h3>
+                    <p class="tab__text">подойдет для небольших рекламных кампаний</p>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>Настройка рекламной компании в Яндекс Директ</li>
+                        <li>Настройка для одного города или области</li>
+                        <li>До 400 ключевых запросов</li>
+                        <li>РСЯ и ретаргетинг на все группы объявлений</li>
+                        <li>Срок настройки и запуска рекламы 8-10 дней</li>
+                        <li>Составление семантического ядра</li>
+                        <li>Ведение рекламной компании рассчитывается индивидуально</li>
+                        <li>Рекомендуемый бюджет от 30 000 ₽.</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="tab__price">от 60 000 ₽</p>
                     <button class="btn">Заказать</button>
                 </div>
             </div>
@@ -409,6 +450,23 @@
                 <div class="clients-item">
                     <img src="img/Getman.svg" alt="Fidesco">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="request">
+        <div class="container request">
+            <div class="request-content">
+                <h2>
+                    Оставьте заявку на настройку контекстной рекламы
+                </h2>
+                <a href="#" class="btn-black">Оставить заявку</a>
+            </div>
+            <div class="request-img" id="scene2">
+                <img src="img/mac.png" data-depth=".2" alt="mac">
+                <img src="img/mac-dots.svg" data-depth=".4" alt="dots">
+                <img src="img/pointer.svg" data-depth=".2" alt="pointer">
+                <img src="img/pointer.svg" data-depth=".5" alt="pointer">
             </div>
         </div>
     </section>
