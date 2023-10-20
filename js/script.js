@@ -8,7 +8,7 @@ $('a[href*="#"]').on('click', function (e) {
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top, }, 300,)
 });
 
-
+// reclam *********************************
 $(".reclam-slider").on("init reInit afterChange", function (event, slick) {
     var sCurr = slick.slickCurrentSlide() <= 8 ? '0' + (slick.slickCurrentSlide() + 1) : slick.slickCurrentSlide() + 1;
     var sCount = slick.slideCount <= 8 ? '0' + slick.slideCount : slick.slideCount;
@@ -17,13 +17,32 @@ $(".reclam-slider").on("init reInit afterChange", function (event, slick) {
 $('.reclam-slider').slick({
     dots: false,
     infinite: true,
-    speed: 300,
+    speed: 500,
     slidesToShow: 1,
     appendArrows: $(".reclam-controls"),
     centerMode: true,
     variableWidth: true,
     adaptiveHeight: true,
 });
+
+// reviews **************************
+$(".reviews-slider").on("init reInit afterChange", function (event, slick) {
+    var sCurr = slick.slickCurrentSlide() <= 8 ? '0' + (slick.slickCurrentSlide() + 1) : slick.slickCurrentSlide() + 1;
+    var sCount = slick.slideCount <= 8 ? '0' + slick.slideCount : slick.slideCount;
+    $(".reviews__counter").html('<span>' + sCurr + '</span>' + "/" + sCount);
+});
+$('.reviews-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    appendArrows: $(".reviews-controls"),
+    centerMode: true,
+    variableWidth: true,
+    adaptiveHeight: true,
+});
+
+// clients *****************
 
 $('.clients-slider').slick({
     dots: false,
