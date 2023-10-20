@@ -364,15 +364,15 @@
     color: white
     padding: 97px 165px
     position: relative
-    margin-bottom: 90px
     min-height: 438px
     background-image: url('../img/rec-bg.svg')
     background-repeat: no-repeat
     background-position: center right
     background-size: cover
+    margin-bottom: 40px
     &__heading
         max-width: 470px
-        i 
+        i
             font-style: normal
 
     &-img
@@ -400,6 +400,19 @@
             &:nth-child(4)
                 top: 48% !important
                 left: 12% !important
+
+.article
+    h2, h3, h4, h5, h6
+        margin-bottom: 10px
+    p, ul, ol
+        margin-bottom: 15px
+    ul
+        padding-left: 10px
+    ol
+        padding-left: 30px
+
+    &-hidden
+        display: none
 
 @media screen and ( max-width: 1600px )
     .main
@@ -463,6 +476,10 @@
         min-height: unset
         &-img
             // right: 10%
+
+    .article
+        p
+            font-size: 16px
 
 @media screen and ( max-width: 1400px )
     .clients
@@ -662,7 +679,7 @@
         &__headng
             font-size: 20px
             margin-bottom: 8px
-        
+
         &__price
             font-size: 20px
             margin-bottom: 16px
@@ -670,7 +687,7 @@
         &-btn
             border-radius: 10px
             padding: 16px
-        
+
         &-content
             background-size: 240px auto
             &.active
@@ -698,7 +715,7 @@
 
         &__heading
             margin-bottom: 40px
-            
+
         &-img
             position: absolute
             max-width: 100%
@@ -788,6 +805,10 @@
                 &:nth-child(4)
                     top: -15% !important
                     left: 9% !important
+
+    .article
+        p
+            font-size: 14px
 
 @keyframes lineAnim
     0%

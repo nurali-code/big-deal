@@ -87,6 +87,13 @@ $('[data-tab-btn]').click(function () {
     $('[data-tab-content]').not('[data-tab-content="' + tabBtnValue + '"]').removeClass('active');
 })
 
+$('[data-togler-btn]').click(function () {
+    $(this).toggleClass('active');
+    $(this).hasClass('active') ? $(this).text('Свернуть') : $(this).text('Развернуть');
+    var toglerBtnValue = $(this).attr('data-togler-btn');
+    $('[data-togler-content="' + toglerBtnValue + '"]').slideToggle();
+})
+
 
 $('.dropdown-btn').on('click', function (e) {
     if ($(this).hasClass('active')) { $('.dropdown-btn').removeClass('active').next().slideUp(); }
